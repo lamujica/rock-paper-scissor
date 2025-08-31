@@ -1,4 +1,4 @@
-console.log("Hello World!");
+// console.log("Hello World!");
 
 function getComputerChoice() {
   const choices = ["rock", "paper", "scissors"];
@@ -11,5 +11,5 @@ function getHumanChoice() {
   console.log(choice);
 }
 
-getComputerChoice();
-getHumanChoice();
+let humanScore = 0;
+let computerScore = 0;
