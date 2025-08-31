@@ -13,3 +13,11 @@ function getHumanChoice() {
 
 let humanScore = 0;
 let computerScore = 0;
+
+function playRound(humanChoice, computerChoice) {
+  if (humanChoice === computerChoice) {
+    console.log(`It is a tie! You selected: ${humanChoice} & Computer selected: ${computerChoice}`);
+  }
+}
+
+playRound("scissors", "scissors");
