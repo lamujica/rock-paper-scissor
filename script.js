@@ -17,7 +17,6 @@ let computerScore = 0;
 function playRound(humanChoice, computerChoice) {
   if (humanChoice === computerChoice) {
     console.log(`It is a tie! You selected: ${humanChoice} & Computer selected: ${computerChoice}`);
-    computerScore += 1;
   } else if (humanChoice === "rock" && computerChoice === "paper") {
     console.log(`You selected: ${humanChoice} & Computer selected: ${computerChoice} --> Computer Wins!`);
     computerScore += 1;
@@ -31,9 +30,15 @@ function playRound(humanChoice, computerChoice) {
     console.log(`You selected: ${humanChoice} & Computer selected: ${computerChoice} --> The Human Race Wins! Congrats!`);
     humanScore++;
   }
+  console.log(`Human Score:${humanScore} Computer Score:${computerScore}`);
 }
 
-playRound(getHumanChoice(), getComputerChoice());
+function playGame() {
+  for (let i = 0; i < 5; i++) {
+    playRound(getHumanChoice(), getComputerChoice());
+  }
+}
+
+playGame();
 
 //need to fix increment error; not holding value as anticipated.
-console.log(`Human Score:${humanScore} Computer Score:${computerScore}`);
